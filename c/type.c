@@ -1,6 +1,13 @@
+/**
+ * main - Entry point
+ * @argc: the number of arguments
+ * @argv: the arguments
+ *
+ * Return: 0
+ */
 #include <stdio.h>
 
-int main(int argc, char *argv[])
+int main(void)
 {
     int x, y;
 

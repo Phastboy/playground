@@ -1,3 +1,7 @@
+/**
+ * This program prints a square of bars
+ *
+ */
 #include <stdio.h>
 
 int main()
