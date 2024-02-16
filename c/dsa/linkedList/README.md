@@ -49,13 +49,22 @@
 
 **Prepend**
 
+1. start a function
+2. initialize the head node, this is the entry point to the linked list.
+3. collect input data or assume you have input data.
+4. allocate a space for a new node.
+5. store the data in some part allocated space.
+6. point the remaining space to the head node, this links the nodes together.
+7. point the head node back to the new node, this ensures the head node always points to the first node.
+8. return the head node.
+9. End the function
 
 Boom!!! you just created a linked list.
 
 ***To print the element in each node and return the number of nodes***
 
 1. start a function
-2. let an integer variable(counter) equals zero, this helps in recording the number of nodes.
+2. initialize the number of nodes, this helps in recording the number of nodes.
 3. let a pointer point to the head node returned from the step above, this ensures you start transversing from the beginning of the list.
 4. as long as the pointer is not null, print the element stored where it points to(iteration over only exiting node).
 5. then update the pointer to point to the next node.
