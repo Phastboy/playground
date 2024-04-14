@@ -2,8 +2,12 @@
 /*
  * A right angled triangle
  */
-let bar='';
-for (let i = 0; i < 7; i++) {
-  bar+='#';
-  console.log(bar);
+var height=process.argv[2];
+function triangle(height) {
+  let bar='';
+  for (let i = 0; i < height; i++) {
+    bar+='#';
+    console.log(bar);
+  }
 }
+triangle(height);
