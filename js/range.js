@@ -9,3 +9,12 @@ function range(a, b) {
   return range;
 }
 console.log(range(4, 9));
+
+function sum(range) {
+  let sum=0;
+  for (let i = 0; i < range.length; i++) {
+    sum+=range[i];
+  }
+  return sum;
+}
+console.log(sum(range(1, 10)));
