@@ -1,14 +1,21 @@
 #!/usr/bin/env node
 
-function range(a, b) {
+function range(a, b, c) {
   let range=[a];
-  while (a<b) {
-    a+=1;
-    range.push(a);
+  if (c) {
+    while (a<b) {
+      a+=c;
+      range.push(a);
+    }
+  } else {
+    while (a<b) {
+      a+=1;
+      range.push(a);
+    }
   }
   return range;
 }
-console.log(range(4, 9));
+console.log(range(4, 9, 2));
 
 function sum(range) {
   let sum=0;
