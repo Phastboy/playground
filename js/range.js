@@ -15,7 +15,7 @@ function range(a, b, c) {
   }
   return range;
 }
-console.log(range(4, 9, 2));
+console.log(range(3, 15, 3));
 
 function sum(range) {
   let sum=0;
