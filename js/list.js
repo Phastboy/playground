@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 class Node{
     constructor(number, next){
         this.number=number,
