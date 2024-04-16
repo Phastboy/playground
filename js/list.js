@@ -7,19 +7,26 @@ class Node{
     }
 }
 
-function List() {
-    var head;
-    var numbers=[8, 5, 1, 3, 4, 9];
-    while (head==null) {
-        for (let i = 0, len = 6; i < len; i++) {
-            var node=new Node();
-            node.number=numbers[i];
-            node.next=head;
-            head=node;
-            console.log(head);
-        }
-    }
-    return head;
+function List(numbers) {
+  var head;
+  while (head==null) {
+      for (let i = 0; i < numbers.length; i++) {
+          var node=new Node();
+          node.number=numbers[i];
+          node.next=head;
+          head=node;
+          console.log(head);
+      }
+  }
+  return head;
 }
-List()
+List([8, 5, 1, 3, 4, 9]);
 
+function list(array) {
+  for (let i = 0; i < array.length; i++) {
+    list={value: array[i], rest: list}
+  }
+  return list;
+}
+
+console.log(list([1,2,3]));
