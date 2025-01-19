@@ -20,6 +20,13 @@ export class App {
     console.log('i am active');
     
   };
+
+  /**
+   * getMethod
+   */
+  public getMethod() {
+    return this.method;
+  }
 }
 
 const app1=App.getInstance();
@@ -27,4 +34,5 @@ const app2=App.getInstance();
 
 app2.welcome();
 console.log(app2===app1);
+console.log(app1.getMethod());
 
