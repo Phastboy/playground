@@ -1,6 +1,7 @@
 export class App {
-  private static instance: App;
+  private static instance: App | null=null;
   private method: string;
+  private static counter=0;
   
   private constructor() {
     this.method='singleton'
@@ -10,15 +11,17 @@ export class App {
    * getInstance
    */
   public static getInstance() {
+    let counter=0;
     if (!App.instance) {
       App.instance=new App();
+      App.counter++;
     }
+    console.log(`Instance created: ${App.counter}`);
     return App.instance
   }
 
   public welcome(){
     console.log('i am active');
-    
   };
 
   /**
@@ -27,12 +30,20 @@ export class App {
   public getMethod() {
     return this.method;
   }
+
+  /**
+   * resetInstance
+   */
+  public static resetInstance() {
+    App.instance=null;
+    console.log('Instance reset');
+  };
 }
 
 const app1=App.getInstance();
-const app2=App.getInstance();
-
-app2.welcome();
-console.log(app2===app1);
 console.log(app1.getMethod());
+
+App.resetInstance();  
+const app2=App.getInstance();
+console.log(app2===app1);
 
