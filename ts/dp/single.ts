@@ -12,7 +12,6 @@ export class App {
    * getInstance
    */
   public static getInstance() {
-    let counter=0;
     if (!App.instance) {
       App.instance=new App();
       console.log(`${App.createdAt}`);
