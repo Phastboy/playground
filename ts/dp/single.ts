@@ -2,6 +2,7 @@ export class App {
   private static instance: App | null=null;
   private method: string;
   private static counter=0;
+  private static createdAt=Date.now();
   
   private constructor() {
     this.method='singleton'
@@ -14,6 +15,7 @@ export class App {
     let counter=0;
     if (!App.instance) {
       App.instance=new App();
+      console.log(`${App.createdAt}`);
       App.counter++;
     }
     console.log(`Instance created: ${App.counter}`);
